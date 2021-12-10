@@ -24,6 +24,13 @@ def index():
     return render_template('bootstrap_table.html', title='Bootstrap Table',
                            users=users)
 
+{% block scripts %}
+  <script>
+    $(document).ready(function () {
+      $('#data').DataTable();
+    });
+  </script>
+{% endblock %}
 
 if __name__ == '__main__':
     app.run()
